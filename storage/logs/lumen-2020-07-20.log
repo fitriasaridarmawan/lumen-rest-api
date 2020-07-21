@@ -1,0 +1,236 @@
+[2020-07-20 04:11:42] local.ERROR: Error: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Application.php:223
+Stack trace:
+#0 C:\xampp\htdocs\rest_api_lumen2\bootstrap\app.php(97): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 C:\xampp\htdocs\rest_api_lumen2\artisan(18): require('C:\\xampp\\htdocs...')
+#2 {main} {"exception":"[object] (Error(code: 0): Class 'Tymon\\JWTAuth\\Providers\\LumenServiceProvider' not found at C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Application.php:223)
+[stacktrace]
+#0 C:\\xampp\\htdocs\est_api_lumen2\\bootstrap\\app.php(97): Laravel\\Lumen\\Application->register('Tymon\\\\JWTAuth\\\\P...')
+#1 C:\\xampp\\htdocs\est_api_lumen2\\artisan(18): require('C:\\\\xampp\\\\htdocs...')
+#2 {main}
+"} 
+[2020-07-20 04:22:17] local.ERROR: PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lumen-rest-api2.users' doesn't exist in C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php:458
+Stack trace:
+#0 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(458): PDO->prepare('insert into `us...')
+#1 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(664): Illuminate\Database\Connection->Illuminate\Database\{closure}('insert into `us...', Array)
+#2 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(631): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(465): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#4 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(417): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#5 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Query\Processors\Processor.php(32): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#6 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Query\Builder.php(2772): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `us...', Array, 'id')
+#7 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Builder.php(1403): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Model.php(900): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Model.php(865): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Model.php(728): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\FactoryBuilder.php(210): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\support\Traits\EnumeratesValues.php(202): Illuminate\Database\Eloquent\FactoryBuilder->Illuminate\Database\Eloquent\{closure}(Object(App\User), 0)
+#13 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\FactoryBuilder.php(211): Illuminate\Support\Collection->each(Object(Closure))
+#14 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\FactoryBuilder.php(176): Illuminate\Database\Eloquent\FactoryBuilder->store(Object(Illuminate\Database\Eloquent\Collection))
+#15 C:\xampp\htdocs\rest_api_lumen2\database\seeds\UsersTableSeeder.php(15): Illuminate\Database\Eloquent\FactoryBuilder->create()
+#16 [internal function]: UsersTableSeeder->run()
+#17 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(37): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#19 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(95): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#20 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(39): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#21 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Container.php(592): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#22 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Seeder.php(134): Illuminate\Container\Container->call(Array)
+#23 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Seeder.php(48): Illuminate\Database\Seeder->__invoke()
+#24 C:\xampp\htdocs\rest_api_lumen2\database\seeds\DatabaseSeeder.php(18): Illuminate\Database\Seeder->call('UsersTableSeede...')
+#25 [internal function]: DatabaseSeeder->run()
+#26 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(37): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#28 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(95): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#29 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(39): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#30 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Container.php(592): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#31 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Seeder.php(134): Illuminate\Container\Container->call(Array)
+#32 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Console\Seeds\SeedCommand.php(65): Illuminate\Database\Seeder->__invoke()
+#33 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Concerns\GuardsAttributes.php(148): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#34 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Console\Seeds\SeedCommand.php(66): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#35 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->handle()
+#36 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(37): call_user_func_array(Array, Array)
+#37 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#38 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(95): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#39 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(39): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#40 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Container.php(592): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#41 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\console\Command.php(134): Illuminate\Container\Container->call(Array)
+#42 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Command\Command.php(258): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#43 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\console\Command.php(121): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#44 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Application.php(911): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#45 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Application.php(264): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#46 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Application.php(140): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#47 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\console\Application.php(93): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#48 C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Console\Kernel.php(116): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#49 C:\xampp\htdocs\rest_api_lumen2\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#50 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lumen-rest-api2.users' doesn't exist (SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (Kenyon Funk Jr., herzog.jed@rowe.com, $2y$10$slJDZxmBcykvY3ap6OnxxOnq9ysztccSjkdiG5tfnZH8Lgg0gyk6G, 2020-07-20 04:22:17, 2020-07-20 04:22:17)) in C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php:671
+Stack trace:
+#0 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(631): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(465): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#2 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Connection.php(417): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#3 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Query\Processors\Processor.php(32): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#4 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Query\Builder.php(2772): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `us...', Array, 'id')
+#5 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Builder.php(1403): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Model.php(900): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#7 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Model.php(865): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#8 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Model.php(728): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#9 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\FactoryBuilder.php(210): Illuminate\Database\Eloquent\Model->save()
+#10 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\support\Traits\EnumeratesValues.php(202): Illuminate\Database\Eloquent\FactoryBuilder->Illuminate\Database\Eloquent\{closure}(Object(App\User), 0)
+#11 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\FactoryBuilder.php(211): Illuminate\Support\Collection->each(Object(Closure))
+#12 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\FactoryBuilder.php(176): Illuminate\Database\Eloquent\FactoryBuilder->store(Object(Illuminate\Database\Eloquent\Collection))
+#13 C:\xampp\htdocs\rest_api_lumen2\database\seeds\UsersTableSeeder.php(15): Illuminate\Database\Eloquent\FactoryBuilder->create()
+#14 [internal function]: UsersTableSeeder->run()
+#15 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(37): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(95): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#18 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(39): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#19 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Container.php(592): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#20 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Seeder.php(134): Illuminate\Container\Container->call(Array)
+#21 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Seeder.php(48): Illuminate\Database\Seeder->__invoke()
+#22 C:\xampp\htdocs\rest_api_lumen2\database\seeds\DatabaseSeeder.php(18): Illuminate\Database\Seeder->call('UsersTableSeede...')
+#23 [internal function]: DatabaseSeeder->run()
+#24 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(37): call_user_func_array(Array, Array)
+#25 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#26 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(95): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#27 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(39): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#28 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Container.php(592): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#29 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Seeder.php(134): Illuminate\Container\Container->call(Array)
+#30 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Console\Seeds\SeedCommand.php(65): Illuminate\Database\Seeder->__invoke()
+#31 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Eloquent\Concerns\GuardsAttributes.php(148): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#32 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\database\Console\Seeds\SeedCommand.php(66): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#33 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->handle()
+#34 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(37): call_user_func_array(Array, Array)
+#35 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Util.php(37): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#36 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(95): Illuminate\Container\Util::unwrapIfClosure(Object(Closure))
+#37 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\BoundMethod.php(39): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#38 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\container\Container.php(592): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#39 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\console\Command.php(134): Illuminate\Container\Container->call(Array)
+#40 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Command\Command.php(258): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#41 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\console\Command.php(121): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#42 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Application.php(911): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#43 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Application.php(264): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#44 C:\xampp\htdocs\rest_api_lumen2\vendor\symfony\console\Application.php(140): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#45 C:\xampp\htdocs\rest_api_lumen2\vendor\illuminate\console\Application.php(93): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#46 C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Console\Kernel.php(116): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#47 C:\xampp\htdocs\rest_api_lumen2\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#48 {main} {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lumen-rest-api2.users' doesn't exist (SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (Kenyon Funk Jr., herzog.jed@rowe.com, $2y$10$slJDZxmBcykvY3ap6OnxxOnq9ysztccSjkdiG5tfnZH8Lgg0gyk6G, 2020-07-20 04:22:17, 2020-07-20 04:22:17)) at C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php:671)
+[stacktrace]
+#0 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(631): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(465): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(417): Illuminate\\Database\\Connection->statement('insert into `us...', Array)
+#3 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `us...', Array)
+#4 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Query\\Builder.php(2772): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `us...', Array, 'id')
+#5 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Builder.php(1403): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Model.php(900): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Model.php(865): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Model.php(728): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\FactoryBuilder.php(210): Illuminate\\Database\\Eloquent\\Model->save()
+#10 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\support\\Traits\\EnumeratesValues.php(202): Illuminate\\Database\\Eloquent\\FactoryBuilder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\User), 0)
+#11 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\FactoryBuilder.php(211): Illuminate\\Support\\Collection->each(Object(Closure))
+#12 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\FactoryBuilder.php(176): Illuminate\\Database\\Eloquent\\FactoryBuilder->store(Object(Illuminate\\Database\\Eloquent\\Collection))
+#13 C:\\xampp\\htdocs\est_api_lumen2\\database\\seeds\\UsersTableSeeder.php(15): Illuminate\\Database\\Eloquent\\FactoryBuilder->create()
+#14 [internal function]: UsersTableSeeder->run()
+#15 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(37): call_user_func_array(Array, Array)
+#16 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(39): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#19 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#20 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#21 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Seeder.php(48): Illuminate\\Database\\Seeder->__invoke()
+#22 C:\\xampp\\htdocs\est_api_lumen2\\database\\seeds\\DatabaseSeeder.php(18): Illuminate\\Database\\Seeder->call('UsersTableSeede...')
+#23 [internal function]: DatabaseSeeder->run()
+#24 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(37): call_user_func_array(Array, Array)
+#25 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#27 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(39): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#28 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#29 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#30 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Console\\Seeds\\SeedCommand.php(65): Illuminate\\Database\\Seeder->__invoke()
+#31 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Concerns\\GuardsAttributes.php(148): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#32 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Console\\Seeds\\SeedCommand.php(66): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#33 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#34 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(37): call_user_func_array(Array, Array)
+#35 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#36 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#37 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(39): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#38 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#39 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\console\\Command.php(134): Illuminate\\Container\\Container->call(Array)
+#40 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Command\\Command.php(258): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Application.php(911): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Application.php(264): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Application.php(140): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 C:\\xampp\\htdocs\est_api_lumen2\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lumen-rest-api2.users' doesn't exist at C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php:458)
+[stacktrace]
+#0 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(458): PDO->prepare('insert into `us...')
+#1 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(664): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into `us...', Array)
+#2 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(631): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(465): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
+#4 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Connection.php(417): Illuminate\\Database\\Connection->statement('insert into `us...', Array)
+#5 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `us...', Array)
+#6 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Query\\Builder.php(2772): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `us...', Array, 'id')
+#7 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Builder.php(1403): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#8 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Model.php(900): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#9 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Model.php(865): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#10 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Model.php(728): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#11 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\FactoryBuilder.php(210): Illuminate\\Database\\Eloquent\\Model->save()
+#12 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\support\\Traits\\EnumeratesValues.php(202): Illuminate\\Database\\Eloquent\\FactoryBuilder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\User), 0)
+#13 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\FactoryBuilder.php(211): Illuminate\\Support\\Collection->each(Object(Closure))
+#14 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\FactoryBuilder.php(176): Illuminate\\Database\\Eloquent\\FactoryBuilder->store(Object(Illuminate\\Database\\Eloquent\\Collection))
+#15 C:\\xampp\\htdocs\est_api_lumen2\\database\\seeds\\UsersTableSeeder.php(15): Illuminate\\Database\\Eloquent\\FactoryBuilder->create()
+#16 [internal function]: UsersTableSeeder->run()
+#17 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(37): call_user_func_array(Array, Array)
+#18 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(39): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#21 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#22 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#23 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Seeder.php(48): Illuminate\\Database\\Seeder->__invoke()
+#24 C:\\xampp\\htdocs\est_api_lumen2\\database\\seeds\\DatabaseSeeder.php(18): Illuminate\\Database\\Seeder->call('UsersTableSeede...')
+#25 [internal function]: DatabaseSeeder->run()
+#26 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(37): call_user_func_array(Array, Array)
+#27 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#29 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(39): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#30 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#31 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#32 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Console\\Seeds\\SeedCommand.php(65): Illuminate\\Database\\Seeder->__invoke()
+#33 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Eloquent\\Concerns\\GuardsAttributes.php(148): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#34 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\database\\Console\\Seeds\\SeedCommand.php(66): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#35 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#36 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(37): call_user_func_array(Array, Array)
+#37 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#38 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#39 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\BoundMethod.php(39): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#40 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#41 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\console\\Command.php(134): Illuminate\\Container\\Container->call(Array)
+#42 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Command\\Command.php(258): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#43 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#44 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Application.php(911): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Application.php(264): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\symfony\\console\\Application.php(140): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\illuminate\\console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#49 C:\\xampp\\htdocs\est_api_lumen2\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#50 {main}
+"} 
+[2020-07-20 08:16:02] local.ERROR: Symfony\Component\ErrorHandler\Error\FatalError: main(): Failed opening required 'C:\xampp\htdocs\rest_api_lumen2\public../vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\rest_api_lumen2\public\index.php:15
+Stack trace:
+#0 C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(80): Symfony\Component\ErrorHandler\Error\FatalError->__construct()
+#1 C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(67): Laravel\Lumen\Application->fatalErrorFromPhpError()
+#2 C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#3 C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(0): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure:C:\xampp\htdocs\rest_api_lumen2\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php:54-56}()
+#4 C:\xampp\htdocs\rest_api_lumen2\public\index.php(0): {main}()
+#5 {main} {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): main(): Failed opening required 'C:\\xampp\\htdocs\est_api_lumen2\\public../vendor/autoload.php' (include_path='C:\\xampp\\php\\PEAR') at C:\\xampp\\htdocs\est_api_lumen2\\public\\index.php:15)
+[stacktrace]
+#0 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(80): Symfony\\Component\\ErrorHandler\\Error\\FatalError->__construct()
+#1 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(67): Laravel\\Lumen\\Application->fatalErrorFromPhpError()
+#2 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(55): Laravel\\Lumen\\Application->handleShutdown()
+#3 C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(0): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure:C:\\xampp\\htdocs\est_api_lumen2\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php:54-56}()
+#4 C:\\xampp\\htdocs\est_api_lumen2\\public\\index.php(0): {main}()
+#5 {main}
+"} 
